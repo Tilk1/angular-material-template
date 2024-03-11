@@ -7,11 +7,11 @@ import { SharedModule } from 'src/app/shared/shared.module';
 
 
 @NgModule({
-  declarations: [IconsComponent],
-  imports: [
-    CommonModule,
-    SharedModule,
-    IconsRoutingModule
-  ]
+    imports: [
+        CommonModule,
+        SharedModule,
+        IconsRoutingModule,
+        IconsComponent
+    ]
 })
 export class IconsModule { }

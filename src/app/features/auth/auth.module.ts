@@ -8,11 +8,11 @@ import { PasswordResetComponent } from './password-reset/password-reset.componen
 import { SharedModule } from 'src/app/shared/shared.module';
 
 @NgModule({
-  imports: [
-    CommonModule,
-    SharedModule,
-    AuthRoutingModule
-  ],
-  declarations: [LoginComponent, PasswordResetRequestComponent, PasswordResetComponent]
+    imports: [
+        CommonModule,
+        SharedModule,
+        AuthRoutingModule,
+        LoginComponent, PasswordResetRequestComponent, PasswordResetComponent
+    ]
 })
 export class AuthModule { }

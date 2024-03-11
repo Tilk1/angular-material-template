@@ -6,11 +6,27 @@ import { Subscription } from 'rxjs';
  import { AuthenticationService } from 'src/app/core/services/auth.service';
 import { SpinnerService } from '../../core/services/spinner.service';
 import { AuthGuard } from 'src/app/core/guards/auth.guard';
+import { MatLegacyProgressBarModule } from '@angular/material/legacy-progress-bar';
+import { NgIf, AsyncPipe } from '@angular/common';
+import { MatDividerModule } from '@angular/material/divider';
+import { MatLineModule } from '@angular/material/core';
+import { MatLegacyListModule } from '@angular/material/legacy-list';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { ExtendedModule } from '@angular/flex-layout/extended';
+import { MatBadgeModule } from '@angular/material/badge';
+import { MatLegacyMenuModule } from '@angular/material/legacy-menu';
+import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
+import { MatLegacyTooltipModule } from '@angular/material/legacy-tooltip';
+import { MatIconModule } from '@angular/material/icon';
+import { MatLegacyButtonModule } from '@angular/material/legacy-button';
+import { MatToolbarModule } from '@angular/material/toolbar';
 
 @Component({
     selector: 'app-layout',
     templateUrl: './layout.component.html',
-    styleUrls: ['./layout.component.css']
+    styleUrls: ['./layout.component.css'],
+    standalone: true,
+    imports: [MatToolbarModule, MatLegacyButtonModule, MatIconModule, MatLegacyTooltipModule, RouterLink, MatLegacyMenuModule, MatBadgeModule, ExtendedModule, MatSidenavModule, MatLegacyListModule, RouterLinkActive, MatLineModule, MatDividerModule, NgIf, MatLegacyProgressBarModule, RouterOutlet, AsyncPipe]
 })
 export class LayoutComponent implements OnInit, OnDestroy, AfterViewInit {
 

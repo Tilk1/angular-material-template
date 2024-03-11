@@ -7,11 +7,11 @@ import { SharedModule } from 'src/app/shared/shared.module';
 
 
 @NgModule({
-  declarations: [TypographyComponent],
-  imports: [
-    CommonModule,
-    SharedModule,
-    TypographyRoutingModule
-  ]
+    imports: [
+        CommonModule,
+        SharedModule,
+        TypographyRoutingModule,
+        TypographyComponent
+    ]
 })
 export class TypographyModule { }

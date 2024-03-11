@@ -8,12 +8,12 @@ import { ProfileDetailsComponent } from './profile-details/profile-details.compo
 import { SharedModule } from 'src/app/shared/shared.module';
 
 @NgModule({
-  imports: [
-    CommonModule,
-    SharedModule,
-    AccountRoutingModule
-  ],
-  declarations: [AccountPageComponent, ChangePasswordComponent, ProfileDetailsComponent],
-  exports: [AccountPageComponent]
+    imports: [
+        CommonModule,
+        SharedModule,
+        AccountRoutingModule,
+        AccountPageComponent, ChangePasswordComponent, ProfileDetailsComponent
+    ],
+    exports: [AccountPageComponent]
 })
 export class AccountModule { }

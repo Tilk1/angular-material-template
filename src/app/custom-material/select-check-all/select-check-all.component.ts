@@ -1,12 +1,14 @@
 import { Component, Input, ViewEncapsulation } from '@angular/core';
 import { UntypedFormControl } from '@angular/forms';
-import { MatCheckboxChange } from '@angular/material/checkbox';
+import { MatLegacyCheckboxChange as MatCheckboxChange, MatLegacyCheckboxModule } from '@angular/material/legacy-checkbox';
 
 @Component({
-  selector: 'app-select-check-all',
-  templateUrl: './select-check-all.component.html',
-  styleUrls: ['./select-check-all.component.css'],
-  encapsulation: ViewEncapsulation.None
+    selector: 'app-select-check-all',
+    templateUrl: './select-check-all.component.html',
+    styleUrls: ['./select-check-all.component.css'],
+    encapsulation: ViewEncapsulation.None,
+    standalone: true,
+    imports: [MatLegacyCheckboxModule]
 })
 export class SelectCheckAllComponent {
   @Input()

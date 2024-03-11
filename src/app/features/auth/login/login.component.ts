@@ -1,14 +1,24 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { UntypedFormControl, Validators, UntypedFormGroup } from '@angular/forms';
+import { UntypedFormControl, Validators, UntypedFormGroup, FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { Title } from '@angular/platform-browser';
 import { AuthenticationService } from 'src/app/core/services/auth.service';
 import { NotificationService } from 'src/app/core/services/notification.service';
+import { MatLegacyProgressBarModule } from '@angular/material/legacy-progress-bar';
+import { MatLegacyButtonModule } from '@angular/material/legacy-button';
+import { MatLegacySlideToggleModule } from '@angular/material/legacy-slide-toggle';
+import { NgIf } from '@angular/common';
+import { MatLegacyInputModule } from '@angular/material/legacy-input';
+import { MatLegacyFormFieldModule } from '@angular/material/legacy-form-field';
+import { MatLegacyCardModule } from '@angular/material/legacy-card';
+import { FlexModule } from '@angular/flex-layout/flex';
 
 @Component({
     selector: 'app-login',
     templateUrl: './login.component.html',
-    styleUrls: ['./login.component.css']
+    styleUrls: ['./login.component.css'],
+    standalone: true,
+    imports: [FlexModule, FormsModule, ReactiveFormsModule, MatLegacyCardModule, MatLegacyFormFieldModule, MatLegacyInputModule, NgIf, MatLegacySlideToggleModule, MatLegacyButtonModule, MatLegacyProgressBarModule]
 })
 export class LoginComponent implements OnInit {
 
